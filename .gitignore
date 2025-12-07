@@ -1,0 +1,21 @@
+# Pastas de Build (Lixo gerado ao compilar)
+bin/
+obj/
+
+# Configurações do Visual Studio e VS Code
+.vs/
+.vscode/
+
+# Ficheiros de utilizador (Configurações só do seu PC)
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Configurações locais (Para não ir informação sensível para o GitHub)
+appsettings.Development.json
+.env
+
+# Ficheiros de sistema
+Thumbs.db
+.DS_Store

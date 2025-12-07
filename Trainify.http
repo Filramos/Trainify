@@ -1,0 +1,34 @@
+@Trainify_HostAddress = http://localhost:5253
+
+### 1. Testar Configuração (Deve devolver HTML)
+GET {{Trainify_HostAddress}}/api/ap-configuration/config_url
+Accept: text/html
+
+###
+
+### 2. Ver Parâmetros JSON (Deve devolver JSON do Anexo I)
+GET {{Trainify_HostAddress}}/api/ap-configuration/json_params_url
+Accept: application/json
+
+###
+
+### 3. Ver Lista de Analytics (Deve devolver JSON do Anexo II)
+GET {{Trainify_HostAddress}}/api/ap-analytics/analytics_list_url
+Accept: application/json
+
+###
+
+### 4. Gerar Link para Cliente (Realization)
+GET {{Trainify_HostAddress}}/api/ap-realization/user_url?activityID=5
+Accept: application/json
+
+###
+
+### 5. Simular Acesso de Cliente (POST)
+POST {{Trainify_HostAddress}}/api/ap-realization/provide_client_activity_url
+Content-Type: application/json
+
+{
+  "ActivityID": 10,
+  "InveniraClientID": 999
+}
