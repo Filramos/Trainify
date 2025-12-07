@@ -11,7 +11,7 @@ public class APRealizationController : ControllerBase
     [HttpGet("user_url")]
     public IActionResult DeployActivity(int activityID)
     {
-        string activityUrl = $"https://trainify.onrender.com?activity={activityID}";
+        string activityUrl = $"https://trainify-jksy.onrender.com?activity={activityID}";
         return Ok(new { url = activityUrl });
     }
 
@@ -23,6 +23,6 @@ public class APRealizationController : ControllerBase
     {
         return Ok("Exercício número " + requestData.ActivityID + " vai ser realizado pelo cliente com ID " +
             requestData.InveniraClientID + " no URL: " +
-            $"https://trainify.onrender.com?activity={requestData.ActivityID}&clientID={requestData.InveniraClientID}");
+            $"https://trainify-jksy.onrender.com?activity={requestData.ActivityID}&clientID={requestData.InveniraClientID}");
     }
 }
