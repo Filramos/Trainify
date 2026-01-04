@@ -1,16 +1,17 @@
 using Trainify.Interfaces;       // <--- IMPORTANTE: Adicionar isto
 using Trainify.Implementations;  // <--- IMPORTANTE: Adicionar isto
+using Trainify.Facades;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
 
-// =================================================================
-// ADICIONE ESTA LINHA AQUI:
-// =================================================================
 builder.Services.AddSingleton<IParameterFactory, ConfigurableParameterFactory>();
-// =================================================================
+
+builder.Services.AddScoped<AnalyticsFacade>();
+builder.Services.AddScoped<ConfigurationFacade>();
+builder.Services.AddScoped<RealizationFacade>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
