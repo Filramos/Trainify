@@ -1,5 +1,5 @@
 using Trainify.Interfaces;       // <--- IMPORTANTE: Adicionar isto
-using Trainify.Implementations;  // <--- IMPORTANTE: Adicionar isto
+using Trainify.Implementations;
 using Trainify.Facades;
 
 var builder = WebApplication.CreateBuilder(args);

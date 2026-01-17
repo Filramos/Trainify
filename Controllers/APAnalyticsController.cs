@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Trainify.Facades; // Importante para aceder ao Facade
+using Trainify.Facades;
 using System.Linq;
 
 namespace Trainify.Controllers
